@@ -833,7 +833,7 @@ function showNavbar() {
     let navbarHTML =
         "<header class='navbar'>" +
         "<div class='nav-title'>" +
-        "<img src='images/maehoingenschoollogo.png'>" +
+        "<img src='maehoingenschoollogo.png'>" +
         "<span>โรงเรียนบ้านแม่ฮ้อยเงิน</span>" +
         "</div>" +
         "<div class='nav-links'>";
