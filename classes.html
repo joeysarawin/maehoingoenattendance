@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>จัดการห้องเรียน - โรงเรียนบ้านแม่ฮ้อยเงิน</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="navbar"></div>
+
+    <div class="class-page">
+
+        <a href="dashboard.html" class="back-button">← กลับหน้าหลัก</a>
+
+        <h1>จัดการห้องเรียน</h1>
+
+        <p class="page-description">
+            สร้างและจัดการห้องเรียนของโรงเรียน
+        </p>
+
+        <div class="class-management">
+
+            <h2>สร้างห้องเรียน</h2>
+
+            <div class="class-create">
+
+                <label>ชื่อห้องเรียน</label>
+                <input type="text" id="class-name" placeholder="เช่น ป.5/1">
+
+                <button onclick="addClass()">สร้างห้องเรียน</button>
+
+                <p id="class-message"></p>
+
+            </div>
+
+            <h2>ห้องเรียนทั้งหมด</h2>
+
+            <div id="class-list"></div>
+
+        </div>
+
+    </div>
+    <div id="edit-class-modal" class="edit-modal">
+
+        <div class="edit-modal-box">
+
+            <h2>แก้ไขชื่อห้องเรียน</h2>
+
+            <label>ชื่อห้องเรียน</label>
+
+            <input type="text" id="edit-class-name">
+
+            <div class="edit-modal-buttons">
+
+                <button onclick="saveEditedClass()">
+                    บันทึก
+                </button>
+
+                <button class="cancel-button" onclick="closeEditClass()">
+                    ยกเลิก
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+
+</html>

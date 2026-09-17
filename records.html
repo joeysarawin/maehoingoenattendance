@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ประวัติการเข้าเรียน - โรงเรียนบ้านแม่ฮ้อยเงิน</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="navbar"></div>
+
+    <div class="records-container">
+
+        <h1>ประวัติการเข้าเรียน</h1>
+
+        <div class="records-info">
+
+            <label>ชั้นเรียน:</label>
+
+            <select id="record-class"></select>
+
+            <label>ดูข้อมูล:</label>
+
+            <select id="record-period">
+
+                <option value="daily">รายวัน</option>
+                <option value="week">รายสัปดาห์</option>
+                <option value="month">รายเดือน</option>
+                <option value="term">ทั้งภาคเรียน</option>
+
+            </select>
+
+
+            <div id="daily-date">
+
+                <label>วันที่:</label>
+
+                <input type="date" id="record-date">
+
+            </div>
+
+
+            <div id="week-date">
+
+                <label>ตั้งแต่:</label>
+
+                <input type="date" id="week-start">
+
+                <label>ถึง:</label>
+
+                <input type="date" id="week-end">
+
+            </div>
+
+
+            <div id="month-date">
+
+                <label>เดือน:</label>
+
+                <input type="month" id="record-month">
+
+            </div>
+
+
+            <div id="term-date">
+
+                <label>ภาคเรียน:</label>
+
+                <select id="record-term">
+
+                    <option value="1">ภาคเรียนที่ 1</option>
+                    <option value="2">ภาคเรียนที่ 2</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <div id="records-content"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin - โรงเรียนบ้านแม่ฮ้อยเงิน</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="navbar"></div>
+    <div class="admin-container">
+
+        <h1>Admin Dashboard</h1>
+
+        <div class="admin-cards">
+
+            <div class="admin-card">
+                <h2>นักเรียน</h2>
+                <p id="student-count">0</p>
+                <span>คน</span>
+            </div>
+
+            <div class="admin-card">
+                <h2>ครู</h2>
+                <p id="teacher-count">0</p>
+                <span>คน</span>
+            </div>
+
+            <div class="admin-card">
+                <h2>ห้องเรียน</h2>
+                <p id="class-count">0</p>
+                <span>ห้อง</span>
+            </div>
+
+        </div>
+
+        <h2 class="admin-section-title">จัดการระบบ</h2>
+
+        <div class="admin-actions">
+
+            <div class="admin-action">
+                <h3>จัดการครู</h3>
+                <p>เพิ่มและจัดการบัญชีผู้ใช้ของครู</p>
+                <a href="teachers.html">
+                    <button>จัดการครู</button>
+                </a>
+            </div>
+
+            <div class="admin-action">
+                <h3>จัดการห้องเรียน</h3>
+                <p>สร้างห้องเรียนและเพิ่มข้อมูลนักเรียน</p>
+                <a href="classes.html">
+                    <button>จัดการห้องเรียน</button>
+                </a>
+            </div>
+
+            <div class="admin-action">
+
+                <h3>จัดการคาบเรียน</h3>
+
+                <p>กำหนดจำนวนคาบเรียนที่มีในแต่ละวัน</p>
+
+                <input type="number" id="period-count" min="1" max="20" placeholder="จำนวนคาบ">
+
+                <button onclick="savePeriods()">บันทึกจำนวนคาบ</button>
+
+                <p id="period-message"></p>
+
+            </div>
+
+
+            <div class="admin-action">
+
+                <h3>จัดการภาคเรียน</h3>
+
+                <p>กำหนดวันเริ่มต้นและวันสิ้นสุดของแต่ละภาคเรียน</p>
+
+                <label>ภาคเรียน:</label>
+
+                <select id="term-select">
+
+                    <option value="1">ภาคเรียนที่ 1</option>
+                    <option value="2">ภาคเรียนที่ 2</option>
+
+                </select>
+
+                <label>วันเริ่มภาคเรียน:</label>
+
+                <input type="date" id="term-start">
+
+                <label>วันสิ้นสุดภาคเรียน:</label>
+
+                <input type="date" id="term-end">
+
+                <button onclick="saveTermDates()">บันทึกข้อมูลภาคเรียน</button>
+
+                <p id="term-message"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

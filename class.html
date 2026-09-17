@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>จัดการนักเรียน - โรงเรียนบ้านแม่ฮ้อยเงิน</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="navbar"></div>
+
+    <div class="class-student-page">
+        <a href="classes.html" class="back-button">← กลับห้องเรียน</a>
+
+        <div class="class-header">
+
+            <div class="class-header-left">
+
+                <div class="class-icon">
+                    👥
+                </div>
+
+                <div>
+                    <h1 id="selected-class-name">จัดการนักเรียน</h1>
+                    <p>เพิ่ม แก้ไข หรือลบนักเรียนในห้องเรียนนี้</p>
+                </div>
+
+            </div>
+
+            <button class="add-student-button" onclick="toggleAddStudentForm()">
+                <span>＋</span> เพิ่มนักเรียน
+            </button>
+
+        </div>
+
+
+        <div id="add-student-form" class="add-student-form">
+
+            <h2>เพิ่มนักเรียน</h2>
+
+            <div class="student-form">
+
+                <label>รหัสนักเรียน</label>
+                <input type="text" id="student-id">
+
+                <label>เลขที่</label>
+                <input type="text" id="student-number">
+
+                <label>ชื่อ</label>
+                <input type="text" id="student-firstname">
+
+                <label>นามสกุล</label>
+                <input type="text" id="student-lastname">
+
+                <div class="add-form-buttons">
+
+                    <button onclick="addStudent()">
+                        เพิ่มนักเรียน
+                    </button>
+
+                    <button class="cancel-add-button" onclick="toggleAddStudentForm()">
+                        ยกเลิก
+                    </button>
+
+                </div>
+
+                <p id="student-message"></p>
+
+            </div>
+
+        </div>
+
+
+        <div class="student-list-area">
+
+            <div class="student-list-tools">
+
+                <div class="student-search-box">
+
+                    <span>⌕</span>
+
+                    <input
+                        type="text"
+                        id="student-search-input"
+                        placeholder="ค้นหาด้วยรหัส ชื่อ หรือเลขที่..."
+                        oninput="showStudents()">
+
+                </div>
+
+                <select id="student-sort" onchange="showStudents()">
+
+                    <option value="number">☷ เรียงตามเลขที่</option>
+                    <option value="id">เรียงตามรหัสนักเรียน</option>
+                    <option value="name">เรียงตามชื่อ</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="student-table-container">
+
+                <table class="student-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>#</th>
+                            <th>รหัสนักเรียน</th>
+                            <th>เลขที่</th>
+                            <th>ชื่อ - นามสกุล</th>
+                            <th>จัดการ</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="student-list"></tbody>
+
+                </table>
+
+            </div>
+
+
+            <div class="student-list-footer">
+
+                <p id="student-total">ทั้งหมด 0 คน</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="edit-student-modal" class="edit-modal">
+
+        <div class="edit-modal-box">
+
+            <h2>แก้ไขข้อมูลนักเรียน</h2>
+
+            <label>รหัสนักเรียน</label>
+            <input type="text" id="edit-student-id">
+
+            <label>เลขที่</label>
+            <input type="text" id="edit-student-number">
+
+            <label>ชื่อ</label>
+            <input type="text" id="edit-student-firstname">
+
+            <label>นามสกุล</label>
+            <input type="text" id="edit-student-lastname">
+
+            <div class="edit-modal-buttons">
+
+                <button onclick="saveEditedStudent()">
+                    บันทึก
+                </button>
+
+                <button class="cancel-button" onclick="closeEditStudent()">
+                    ยกเลิก
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

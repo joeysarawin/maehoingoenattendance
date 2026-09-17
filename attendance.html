@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>เช็กชื่อ - โรงเรียนบ้านแม่ฮ้อยเงิน</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="navbar"></div>
+
+    <div class="attendance-container">
+
+        <h1>เช็กชื่อวันนี้</h1>
+
+        <div class="attendance-info">
+
+            <label>ชั้นเรียน:</label>
+
+            <select id="class-select"></select>
+
+            <label>คาบเรียน:</label>
+
+            <select id="period-select"></select>
+
+            <p id="today-date"></p>
+
+        </div>
+
+        <table class="attendance-table">
+
+            <tr>
+                <th>รหัสนักเรียน</th>
+                <th>ชื่อ-นามสกุล</th>
+                <th>สถานะ</th>
+            </tr>
+
+            <tbody id="attendance-list"></tbody>
+
+        </table>
+
+        <button class="save-button" onclick="saveAttendance()">
+            บันทึกการเช็กชื่อ
+        </button>
+
+        <p id="save-message"></p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ระบบเช็กชื่อโรงเรียนบ้านแม่ฮ้อยเงิน</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <img src="images/maehoingenschoollogo.png" class="school-logo">
+
+        <h1>โรงเรียนบ้านแม่ฮ้อยเงิน</h1>
+        <p>ระบบเช็กชื่อและการเข้าเรียน</p>
+
+        <form>
+
+            <label>ชื่อผู้ใช้ / รหัสนักเรียน</label>
+            <input type="text" id="username">
+
+            <label>รหัสผ่าน</label>
+            <input type="password" id="password">
+
+            <button type="button" onclick="login()">เข้าสู่ระบบ</button>
+
+            <p id="error-message"></p>
+
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

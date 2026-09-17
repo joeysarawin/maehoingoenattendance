@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>จัดการครู - โรงเรียนบ้านแม่ฮ้อยเงิน</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="navbar"></div>
+
+    <div class="teacher-page">
+
+        <a href="dashboard.html" class="back-button">← กลับหน้าหลัก</a>
+
+        <h1>จัดการบัญชีครู</h1>
+
+        <p class="page-description">
+            เพิ่มและจัดการบัญชีผู้ใช้สำหรับครู
+        </p>
+
+        <div class="teacher-management">
+
+            <div class="teacher-list-header">
+
+                <h2>บัญชีครูที่ใช้งานอยู่</h2>
+
+                <button class="add-teacher-button"
+                        onclick="toggleAddTeacherForm()">
+                    ＋ เพิ่มบัญชีครู
+                </button>
+
+            </div>
+
+            <table class="teacher-table">
+
+                <tr>
+                    <th>ชื่อ-นามสกุล</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>จัดการ</th>
+                </tr>
+
+                <tbody id="teacher-list"></tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- Add Teacher Popup -->
+
+    <div id="add-teacher-modal" class="edit-modal">
+
+        <div class="edit-modal-box add-teacher-modal-box">
+
+            <h2>เพิ่มบัญชีครู</h2>
+
+            <label>ชื่อ</label>
+            <input type="text" id="teacher-firstname">
+
+            <label>นามสกุล</label>
+            <input type="text" id="teacher-lastname">
+
+            <label>Username</label>
+            <input type="text" id="teacher-username">
+
+            <label>Password</label>
+            <input type="password" id="teacher-password">
+
+            <p id="teacher-message"></p>
+
+            <div class="edit-modal-buttons">
+
+                <button onclick="addTeacher()">
+                    เพิ่มบัญชีครู
+                </button>
+
+                <button class="cancel-button"
+                        onclick="closeAddTeacherForm()">
+                    ยกเลิก
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Edit Teacher Popup -->
+
+    <div id="edit-teacher-modal" class="edit-modal">
+
+        <div class="edit-modal-box">
+
+            <h2>แก้ไขข้อมูลครู</h2>
+
+            <label>ชื่อ</label>
+            <input type="text" id="edit-teacher-firstname">
+
+            <label>นามสกุล</label>
+            <input type="text" id="edit-teacher-lastname">
+
+            <label>Username</label>
+            <input type="text" id="edit-teacher-username">
+
+            <label>Password</label>
+            <input type="password" id="edit-teacher-password">
+
+            <div class="edit-modal-buttons">
+
+                <button onclick="saveEditedTeacher()">
+                    บันทึก
+                </button>
+
+                <button class="cancel-button"
+                        onclick="closeEditTeacher()">
+                    ยกเลิก
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ข้อมูลนักเรียน - โรงเรียนบ้านแม่ฮ้อยเงิน</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="navbar"></div>
+
+
+    <div class="student-container">
+
+        <div id="student-search">
+
+            <h2>ค้นหานักเรียน</h2>
+
+            <input type="text" id="search-student-id" placeholder="กรอกรหัสนักเรียน">
+
+            <button onclick="searchStudent()">ค้นหา</button>
+
+            <p id="search-message"></p>
+
+        </div>
+
+        <h1>ข้อมูลนักเรียน</h1>
+
+        <div class="student-info">
+
+            <div class="student-photo">👤</div>
+
+            <h2 id="student-name">เด็กชายสมชาย ใจดี</h2>
+            <p><strong>รหัสนักเรียน:</strong> <span id="student-id">65001</span></p>
+            <p><strong>ชั้น:</strong> <span id="student-class">ป.5/1</span></p>
+
+        </div>
+
+
+        <h2 class="section-title">สถิติการเข้าเรียน</h2>
+
+        <div class="statistics">
+
+            <div class="stat-box">
+
+                <div class="stat-icon present">✓</div>
+
+                <div class="stat-content">
+                    <h3>มาเรียน</h3>
+                    <p id="present-count">0</p>
+                    <span>ครั้ง</span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-box">
+
+                <div class="stat-icon absent">✕</div>
+
+                <div class="stat-content">
+                    <h3>ขาดเรียน</h3>
+                    <p id="absent-count">0</p>
+                    <span>ครั้ง</span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-box">
+
+                <div class="stat-icon late">◷</div>
+
+                <div class="stat-content">
+                    <h3>มาสาย</h3>
+                    <p id="late-count">0</p>
+                    <span>ครั้ง</span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-box">
+
+                <div class="stat-icon leave">▤</div>
+
+                <div class="stat-content">
+                    <h3>ลา</h3>
+                    <p id="leave-count">0</p>
+                    <span>ครั้ง</span>
+                </div>
+
+            </div>
+
+
+            <div class="rate-box">
+
+                <div class="rate-circle" id="attendance-rate">
+                    0%
+                </div>
+
+                <div class="rate-content">
+                    <h3>อัตราการมาเรียน</h3>
+                    <p id="total-attendance">คิดจากทั้งหมด 0 ครั้ง</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <h2 class="section-title">ประวัติการเข้าเรียน</h2>
+
+        <table class="student-history">
+
+            <tr>
+                <th>วันที่</th>
+                <th>เวลา</th>
+                <th>สถานะ</th>
+            </tr>
+
+            <tbody id="student-history-list"></tbody>
+
+        </table>
+
+
+        <div class="notification">
+
+            <h2>🔔 การแจ้งเตือน</h2>
+
+            <p id="attendance-notification">
+                วันนี้ยังไม่มีการเช็กชื่อ
+            </p>
+
+            <span id="notification-time"></span>
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
