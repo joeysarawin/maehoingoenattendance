@@ -900,7 +900,7 @@ if (document.querySelector("#navbar")) {
 
 function logout() {
     localStorage.removeItem("accessLevel");
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 }
 
 function showStudentStatistics() {
